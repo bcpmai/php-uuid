@@ -1,0 +1,13 @@
+{
+    "name": "j20/php-uuid",
+    "type": "library",
+    "description": "Generate a UUIDv4 with PHP.",
+    "keywords": ["uuid","guid","token"],
+    "license": "MIT",
+    "autoload": {
+        "psr-0": {
+            "J20\\Uuid": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
