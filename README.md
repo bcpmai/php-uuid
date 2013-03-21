@@ -3,11 +3,13 @@ PHP UUID
 
 Generate a UUID v4 (psuedo random) using PHP.
 
-### Installation:
+## Installation:
 
-`composer require j20/php-uuid:dev-master`
+```
+composer require j20/php-uuid:dev-master
+```
 
-### Usage:
+## Usage:
 
 ```PHP
 UUID::v4()  // E.g. 5c01e9be-008f-45eb-811a-639df3c56f7d
