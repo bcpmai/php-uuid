@@ -20,6 +20,6 @@ If using the Laravel framework, open app/config/app.php and add the following wi
 ### Usage:
 
 ```PHP
-UUID::v4()  // E.g. 5c01e9be-008f-45eb-811a-639df3c56f7d
-UUID::v4(false) // E.g. 5c01e9be008f45eb811a639df3c56f7d
+Uuid::v4();  // E.g. 5c01e9be-008f-45eb-811a-639df3c56f7d
+Uuid::v4(false); // E.g. 5c01e9be008f45eb811a639df3c56f7d
 ```
