@@ -1,9 +1,9 @@
 <?php namespace J20\Uuid;
 
 /**
- * UUID
+ * Uuid
  *
- * Generate a Universally Unique Identification Number
+ * Generate a Universally Unique Identifier
  */
 
 class Uuid {
