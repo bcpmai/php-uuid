@@ -1,7 +1,7 @@
 <?php namespace J20\Uuid;
 
 /**
- * Uuid
+ * UUID
  *
  * Generate a Universally Unique Identifier
  */
