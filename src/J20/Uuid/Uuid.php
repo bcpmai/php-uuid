@@ -6,7 +6,7 @@
  * Generate a Universally Unique Identification Number
  */
 
-class UUID {
+class Uuid {
 
     /**
      * Generate a UUID v4
