@@ -19,32 +19,29 @@ class Uuid {
     {
         if ($dashes)
         {
-            $format = '%04x%04x-%04x-%04x-%04x-%04x%04x%04x';
+            $format = '%s-%s-%04x-%04x-%s';
         }
         else
         {
-            $format = '%04x%04x%04x%04x%04x%04x%04x%04x';
+            $format = '%s%s%04x%04x%s';
         }
 
         return sprintf($format,
 
-            // 32 bits for "time_low"
-            mt_rand(0, 0xffff), mt_rand(0, 0xffff),
+            // 8 hex characters
+            bin2hex(openssl_random_pseudo_bytes(4)),
 
-            // 16 bits for "time_mid"
-            mt_rand(0, 0xffff),
+            // 4 hex characters
+            bin2hex(openssl_random_pseudo_bytes(2)),
 
-            // 16 bits for "time_hi_and_version",
-            // four most significant bits holds version number 4
+            // "4" for the UUID version + 3 hex characters
             mt_rand(0, 0x0fff) | 0x4000,
 
-            // 16 bits, 8 bits for "clk_seq_hi_res",
-            // 8 bits for "clk_seq_low",
-            // two most significant bits holds zero and one for variant DCE1.1
+            // (8, 9, a, or b) for the UUID variant + 3 hex characters
             mt_rand(0, 0x3fff) | 0x8000,
 
-            // 48 bits for "node"
-            mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff)
+            // 12 hex characters
+            bin2hex(openssl_random_pseudo_bytes(6))
         );
     }
 
